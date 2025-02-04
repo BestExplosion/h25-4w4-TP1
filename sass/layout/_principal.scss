@@ -1,6 +1,5 @@
 .global {
-    margin : 0 auto;
-    max-width: 1000px;
+    padding: 10vh 2vw;
 }
 
 .hero{
@@ -20,4 +19,53 @@
     font-size: 16px; 
     border-radius: 5px; 
     cursor: pointer; 
+}
+.hero__icone-app{
+    margin-top: 10px;
+}
+
+
+.formulaire{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
+    width: 75vw;
+    height: 100px;
+    bottom: 5vh;
+}
+
+.form__formulaire,
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+form {
+    flex-wrap: wrap;
+}
+
+.formulaire__input,
+.formulaire__button {
+    border: 2px solid #31bcfd;
+}
+.formulaire__input{
+    height: 2rem;
+}
+
+.formulaire__button{
+    width: 150px;
+    height: 2.5rem;
+    margin-top: 18px;
+}
+
+// Version mobile
+@media screen and (max-width:800px){
+    .formulaire{
+        display: none;
+    }
 }
