@@ -56,11 +56,12 @@ Les composants
 @media screen and (max-width: 700px) {
   .menu {
     flex-direction: column;
-    gap: 6px 0;
+    gap: 20px 0;
   }
 }
 .menu__a {
   padding: 2px 5px;
+  font-family: system-ui;
 }
 
 /* *******************
@@ -128,6 +129,16 @@ Le composant .carte
   flex: 0 0 20px;
   padding: 0 3px;
 }
+.recherche .recherche__input::-moz-placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+.recherche .recherche__input::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
 @media screen and (max-width: 800px) {
   .recherche {
     display: none;
@@ -172,8 +183,10 @@ Layout
   background-color: rgb(255, 255, 255);
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
   width: 75vw;
-  height: 100px;
+  height: auto;
+  min-height: 100px;
   bottom: 5vh;
+  padding: 10px;
 }
 
 .form__formulaire,
@@ -203,8 +216,42 @@ form {
   margin-top: 18px;
 }
 
+.galerie {
+  display: flex;
+  flex-direction: column;
+}
+
+.galerie__img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.galerie__destinations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galerie__fig {
+  width: 300px;
+  height: 300px;
+  padding: 2px;
+  margin: 2px;
+  position: relative;
+}
+
+.galerie h2 {
+  margin-left: 120px;
+}
+
 @media screen and (max-width: 800px) {
   .formulaire {
+    display: none;
+  }
+  .galerie {
     display: none;
   }
 }
