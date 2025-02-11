@@ -1,3 +1,12 @@
+<?php 
+
+/**
+ * modèle front-page.php permet d'afficher la pae d'acceuil
+ * 
+ */
+?>
+
+
 <?php get_header() ?>
 <h1>front-page.php</h1>
     <section class="hero">
@@ -6,7 +15,7 @@
                 <?php echo bloginfo('name') ?>
             </h1>
             <p class="hero__description">
-                Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des authentique, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et créez des souvenirs impérissables.
+                <?php echo bloginfo('description') ?>
             </p>
             <p class="hero__courriel">
                 info@cmaisonneuve.qc.ca
@@ -87,13 +96,26 @@
             </figure>
         </div>   
     </section>
+ 
     <section class="populaire">
-        <div class="global">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <article class="populaire__article">
+        <div class="boiteflex global">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+            <?php if(in_category('galerie')){
+                the_content();
+            } else {?>
+            <article class="carte caarte--grande">
+                     <figure class="carte__image">
+                        <img src="images/img1.jpg" alt="Image de voyage">
+                    </figure>
+                    <div class="carte__contenu">
+                    <h2 class="carte__titre"><?php the_title(); ?></h2>
+                    <p class="carte__description"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></p>
+                    <button class="carte__bouton carte__bouton--actif">Suite</button>
+                </div>
                     <h2 class="populaire__titre"><?php the_title(); ?></h2>
                     <div class="pouplaire__contenu"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></div>
-                </article>
+            </article>
+            <?php } ?>
             <?php endwhile; endif; ?>
         </div>
     </section>

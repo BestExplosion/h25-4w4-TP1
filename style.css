@@ -64,6 +64,10 @@ Les composants
   font-family: system-ui;
 }
 
+.menu-item a {
+  padding: 2px 5px;
+}
+
 /* *******************
 Le composant .carte
 ********************** */
@@ -71,9 +75,8 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
-}
-.carte--grande {
-  padding: 40px;
+  flex: 1 1 220px .carte --grande;
+  flex-padding: 40px;
 }
 .carte--petite {
   padding: 20px;
@@ -173,6 +176,13 @@ Layout
 
 .hero__icone-app {
   margin-top: 10px;
+}
+
+.boiteflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .formulaire {
