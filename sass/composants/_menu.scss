@@ -1,25 +1,17 @@
-/* /////////////////////////////////////////// menu principal */
-.menu {
-  flex : 1 1 50%;
-  display: flex;
+/* ----------------------------------------- .menu */
+.menu{ // ul
+  display : flex;
+  @media screen and (max-width: 800px) {
+  flex-direction: column;
+  }
   flex-direction: row;
-  justify-content: flex-end;
-  @media screen and (max-width:$point__rupture) {
-    flex-direction: column;
-    gap : 20px 0;
-  }
-  margin: 0;
-  padding: 0;
   list-style-type: none;
-    &__li {
-      
-    }
-    &__a {
-        padding : 2px 5px;
-        font-family:system-ui ;
-    }
-  }
+  gap : 10px 0;
+  &-item{ // li
 
-  .menu-item a{
-    padding: 2px 5px;
+     a { //a
+      text-decoration : none;
+      padding : 4px;
+     } 
   }
+}

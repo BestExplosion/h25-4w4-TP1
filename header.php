@@ -25,41 +25,7 @@
 		        'container'  => 'div',
 		        'container_class'=> '',
             )); ?>
-                <nav class="entete__menu">
-                    <ul class="menu">
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Sport</a>
-                        </li>   
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Pleine Nature</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Croisière</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Aventure</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Culturel</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a"  href="#">Repos</a>
-                        </li>
-                        <li class="menu__li">
-                            <a  class="menu__a" href="#">Zen</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a" href="#">Économique</a>
-                        </li>
-                        <li class="menu__li">
-                            <a class="menu__a"  href="#">Favorite</a>
-                        </li>
-                        <li class="menu__li">
-                            <a  class="menu__a" href="#">Pays</a>
-                        </li>
-                        
-                    </ul>
-                </nav>
+               
                 <div class="entete__recherche">
                     <form class="recherche">
                         <input type="text" class="recherche__input" placeholder="Recherche...">
