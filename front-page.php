@@ -1,19 +1,21 @@
 <?php 
+
 /**
- *  index.php est le modèle par défaut
- *  si aucun modèle peut satisfaire la requête http dans ce cas c'est index.php qui affichera le contenu de la page 
+ * modèle front-page.php permet d'afficher la pae d'acceuil
  * 
  */
 ?>
 
+
 <?php get_header() ?>
+<h1>front-page.php</h1>
     <section class="hero">
         <div class="hero__contenu global">
             <h1 class="hero__titre">
-                Club de voyage
+                <?php echo bloginfo('name') ?>
             </h1>
             <p class="hero__description">
-                Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des authentique, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et créez des souvenirs impérissables.
+                <?php echo bloginfo('description') ?>
             </p>
             <p class="hero__courriel">
                 info@cmaisonneuve.qc.ca
@@ -94,16 +96,29 @@
             </figure>
         </div>   
     </section>
+ 
     <section class="populaire">
-        <div class="global">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <article class="populaire__article">
-                    <?php
-                    if (has_post_thumbnail())
-                     the_post_thumbnail(); ?>
-                    <h2 class="populaire__titre"><?php the_title(); ?></h2>
-                    <div class="pouplaire__contenu"><?php the_content(); ?></div>
-                </article>
+        <div class="boiteflex global">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+            <?php if(in_category('galerie')){
+                the_content();
+            } else {?>
+            <article class="carte caarte--grande">
+                     <figure class="carte__image">
+                        <img src="images/img1.jpg" alt="Image de voyage">
+                    </figure>
+                    <div class="carte__contenu">
+                        <?php
+                        if(has_post_thumbnail()){
+                            //Permet d'affichr la petite image associé à l'article (image mise en avant)
+                            the_post_thumbnail('thumbnail'); }
+                        ?>
+                    <h2 class="carte__titre"><?php the_title(); ?></h2>
+                    <p class="carte__description"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></p>
+                    <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink() ?>">Suite</a>
+                </div>
+            </article>
+            <?php } ?>
             <?php endwhile; endif; ?>
         </div>
     </section>
