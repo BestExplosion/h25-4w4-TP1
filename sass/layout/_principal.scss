@@ -1,5 +1,11 @@
 .global {
-    padding: 10vh 2vw;
+    padding: 10vh 5vw;
+}
+
+.populaire .global {
+    display: flex;
+    flex-wrap: wrap;
+  
 }
 
 .hero{
@@ -27,7 +33,7 @@
 .boiteflex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -69,47 +75,5 @@ form {
     width: 150px;
     height: 2.5rem;
     margin-top: 18px;
-}
-
-.galerie {
-    display: flex;
-    flex-direction: column;
-}
-
-.galerie__img {
-    width: 100%; 
-    height: 100%; 
-    padding: 0;
-    margin: 0;
-}
-
-.galerie__destinations {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    gap: 10px; 
-}
-
-.galerie__fig {
-    width: 300px;  
-    height: 300px; 
-    padding: 2px;
-    margin: 2px;
-    position: relative; 
-}
-
-.galerie h2 {
-    margin-left: 120px;  
-}
-
-
-// Version mobile
-@media screen and (max-width:800px){
-    .formulaire{
-        display: none;
-    }
-    .galerie{
-        display: none;
-    }
 }
 
