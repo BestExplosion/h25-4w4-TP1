@@ -61,63 +61,14 @@
             </form>
         </div>
     </section>
-    <section class="galerie">
-        <h2>Nos destinations favorites</h2>
-        <div class="galerie__destinations">
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/Australie.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/canada.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/chine.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/espagne.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/japon.jpg' ?>"class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/scotland.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/tanzania.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/uk.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/usa.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/vietnam.jpg' ?>"class="galerie__img">
-            </figure>
-        </div>   
-    </section>
- 
+
     <section class="populaire">
         <div class="boiteflex global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
             <?php if(in_category('galerie')){
                 the_content();
             } else {?>
-            <article class="carte caarte--grande">
-                     <figure class="carte__image">
-                        <img src="images/img1.jpg" alt="Image de voyage">
-                    </figure>
-                    <div class="carte__contenu">
-                        <?php
-                        if(has_post_thumbnail()){
-                            //Permet d'affichr la petite image associé à l'article (image mise en avant)
-                            the_post_thumbnail('thumbnail'); }
-                        ?>
-                    <h2 class="carte__titre"><?php the_title(); ?></h2>
-                    <p class="carte__description"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></p>
-                    <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink() ?>">Suite</a>
-                </div>
-            </article>
+            <?php get_template_part("gabarit/carte"); ?>
             <?php } ?>
             <?php endwhile; endif; ?>
         </div>
