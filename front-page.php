@@ -61,42 +61,7 @@
             </form>
         </div>
     </section>
-    <section class="galerie">
-        <h2>Nos destinations favorites</h2>
-        <div class="galerie__destinations">
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/Australie.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/canada.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/chine.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/espagne.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/japon.jpg' ?>"class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/scotland.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/tanzania.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/uk.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/usa.jpg' ?>" class="galerie__img">
-            </figure>
-            <figure class="galerie__fig">
-                <img src="<?php echo get_template_directory_uri() . '/images/vietnam.jpg' ?>"class="galerie__img">
-            </figure>
-        </div>   
-    </section>
- 
+
     <section class="populaire">
         <div class="boiteflex global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
