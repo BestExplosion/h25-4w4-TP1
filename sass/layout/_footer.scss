@@ -8,18 +8,18 @@ footer{
   }
   
   .piedpage{
-      display: flex;
-      flex-direction: column;
-      &__s1{
-          display: flex;
-          flex-wrap: wrap;
-          gap: 3rem;
-          &__externe {
-              flex : 0 0 20%;
-              & .menu { //ul
-                  display : flex;
-                  flex-direction: column;
-              }
+    display: flex;
+    flex-direction: column;
+    &__s1{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        &__externe {
+            flex : 0 0 20%;
+            & .menu { //ul
+                display : flex;
+                flex-direction: column;
+            }
   
   
           }
