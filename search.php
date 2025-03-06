@@ -10,7 +10,6 @@
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article class="populaire__article">
-
                     <h2 class="populaire__titre"><?php the_title(); ?></h2>
                     <div class="pouplaire__contenu"><?php echo wp_trim_words(get_the_excerpt(), 50, "..."); ?></div>
                 </article>

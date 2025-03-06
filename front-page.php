@@ -26,15 +26,15 @@
             <p class="hero__numero">
                 514-254-7131
             </p>
-            <button class="hero__bouton">
-                s'inscrire
-            </button>
             <div class="hero__icone-app">
                 <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
             </div>
+            <button class="hero__bouton">
+                s'inscrire
+            </button>
         </div>
     </section>
     
