@@ -1,4 +1,8 @@
 <footer>
+    <?php
+    $footer_mission = get_theme_mod('footer_mission', 'Default Title');
+
+    ?>
     <div class="piedpage global">
         <section class="piedpage__s1">
         <div class="piedpage__s1__externe">
@@ -19,7 +23,7 @@
             </div>
             <div class="piedpage__s1__description">
                 <h3>Mission du club</h3>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci magni nihil iusto obcaecati doloribus? Illo vero accusamus nemo perspiciatis rerum repellendus, aut fugiat est a, magni recusandae laborum optio quibusdam.
+                <?php echo $footer_mission; ?>
             </div>
         </section>
         <section class="piedpage__s2">
@@ -29,6 +33,11 @@
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
         </section>
         <section class="piedpage__s3">
+        <?php wp_nav_menu(array(
+                    "menu" => "externe",
+                    "container" => "nav",
+                    "container_class" => ""
+                )); ?>
         </section>
  
  

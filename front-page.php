@@ -6,10 +6,12 @@
  */
 ?>
 
-
 <?php get_header() ?>
 <h1>front-page.php</h1>
-    <section class="hero">
+<?php $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
+    $hero_background = get_theme_mod('hero_background', 'Default Title'); 
+?>
+    <section class="hero" style="background-image: url('<?php echo $hero_background ?>'); Background-repeat: no-repeat">
         <div class="hero__contenu global">
             <h1 class="hero__titre">
                 <?php echo bloginfo('name') ?>
@@ -17,7 +19,7 @@
             <p class="hero__description">
                 <?php echo bloginfo('description') ?>
             </p>
-            <p class="hero__courriel">
+            <p class="hero__courriel" >
                 info@cmaisonneuve.qc.ca
             </p>
             <p class="hero__addresse">
@@ -32,9 +34,11 @@
                 <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
             </div>
+            
             <button class="hero__bouton">
                 s'inscrire
             </button>
+            <p> Auteur: <?php echo $hero_auteur ?> </p>
         </div>
     </section>
     

@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  color: rgb(4, 0, 255);
+  color: rgb(118, 231, 235);
   text-decoration: none;
 }
 a:hover {
@@ -145,11 +145,6 @@ Le composant .carte
   flex: 0 0 20px;
   padding: 0 3px;
 }
-.recherche .recherche__input::-moz-placeholder {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  font-style: italic;
-}
 .recherche .recherche__input::placeholder {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -175,11 +170,11 @@ Layout
 
 .hero {
   min-height: 100vh;
-  background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
 }
 
 .hero__titre {
-  text-shadow: 3px 3px 5px rgb(251, 255, 8);
+  text-shadow: 3px 3px rgb(251, 255, 8);
   font-size: clamp(2rem, 3vw, 5rem);
 }
 
@@ -190,6 +185,7 @@ Layout
   color: black;
   font-size: 16px;
   border-radius: 5px;
+  margin: 25px 0px 25px;
   cursor: pointer;
 }
 
