@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  color: rgb(118, 231, 235);
+  color: rgb(122, 122, 122);
   text-decoration: none;
 }
 a:hover {
@@ -72,6 +72,7 @@ Le composant .carte
 }
 .carte--grande {
   padding: 40px;
+  max-width: 350px;
 }
 .carte--petite {
   padding: 20px;
@@ -161,6 +162,10 @@ Layout
 /////////////////////////// */
 .global {
   padding: 10vh 5vw;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .populaire .global {
