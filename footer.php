@@ -34,7 +34,7 @@
         </section>
         <section class="piedpage__s3">
         <?php wp_nav_menu(array(
-                    "menu" => "externe",
+                    "menu" => "principal",
                     "container" => "nav",
                     "container_class" => ""
                 )); ?>
