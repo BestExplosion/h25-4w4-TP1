@@ -1,5 +1,6 @@
 <?php 
     $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
+    $hero_courriel = get_theme_mod('hero_courriel','Default Title');
     $hero_background = get_theme_mod('hero_background', 'Default Title');
     $couleur = substr(get_theme_mod('hero_icone', '#fff'),1);
     $couleur_texte = get_theme_mod('hero_texte', '#fff');
@@ -16,8 +17,7 @@
             <p class="hero__description hero__couleur">
                 <?php echo bloginfo('description') ?>
             </p>
-            <p class="hero__courriel" >
-                info@cmaisonneuve.qc.ca
+            <p class="hero__courriel" ><?php echo $hero_courriel ?>
             </p>
             <p class="hero__addresse">
                 3800, rue Sherbrooke, Montreal

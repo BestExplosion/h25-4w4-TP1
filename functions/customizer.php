@@ -18,6 +18,18 @@ function theme_31w_customize_register($wp_customize) {
     'section' => 'hero_section',
     'type' => 'text',
   ));
+    /**Courriel */
+    $wp_customize->add_setting('hero_courriel', array(
+        'default' => __('Johnny Tan', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      
+      $wp_customize->add_control('hero_courriel', array(
+        'label' => __('Courriel', 'theme_31w'),
+        'section' => 'hero_section',
+        'type' => 'text',
+      ));
+      
   
   /**Image d’arrière-plan */
   
@@ -46,7 +58,28 @@ function theme_31w_customize_register($wp_customize) {
     'section' => 'footer_section',
     'type' => 'text',
   ));
+   /**Champ adresse */
+   $wp_customize->add_setting('footer_adresse', array(
+    'default' => __('Adresse', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
   
+  $wp_customize->add_control('footer_adresse', array(
+    'label' => __('Adresse', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'text',
+  ));
+    /**Champ telephone */
+    $wp_customize->add_setting('footer_telephone', array(
+        'default' => __('Telephone', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      
+      $wp_customize->add_control('footer_telephone', array(
+        'label' => __('Telephone', 'theme_31w'),
+        'section' => 'footer_section',
+        'type' => 'text',
+      ));
   /**Couleur du texte de la zone hero */
   $wp_customize->add_setting('hero_icone', array(
     'default' => '',

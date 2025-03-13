@@ -1,6 +1,8 @@
 <footer>
     <?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
+    $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
+    $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
 
     ?>
     <div class="piedpage global">
@@ -16,8 +18,9 @@
  
                 <div class="piedpage__s1__adresse__recherche">
                     <h3>Adresse et recherche</h3>
-                    3800, Sherbrooke est, Montréal, Québec, Canada, H1X 2A2 <br>
+                    <p><?php echo $footer_adresse; ?></p>
                     Tel: (514) 254-7131
+                    <p><?php echo $footer_telephone; ?></p>
                     <?php get_search_form();   ?>
                 </div>
             </div>
