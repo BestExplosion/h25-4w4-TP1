@@ -135,10 +135,6 @@ Le composant .carte
   border: none;
   outline: none;
   background-color: rgb(255, 255, 255);
-  border-right: 1px dotted rgba(0, 0, 0, 0.2);
-}
-.recherche__input:hover {
-  background-color: rgba(0, 0, 0, 0.05);
 }
 .recherche__img {
   flex: 0 0 20px;
@@ -276,7 +272,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffe65b;
+  background-color: rgb(44, 62, 80);
 }
 .entete__nav {
   display: flex;
