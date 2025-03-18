@@ -20,12 +20,16 @@ body{
 
 .hero__titre{
     text-shadow: 3px 3px rgb(251, 255, 8);
-    font-size: clamp(2rem, 3vw, 5rem);
+    font-size: clamp(3rem, 4vw, 6rem);
+}
+.hero__description, .hero__courriel, .hero__addresse, .hero__numero, .hero__auteur{
+    font-size: 20px;
+    color: rgb(255, 214, 138);
 }
 
 .hero__bouton {
     background-color: rgb(243, 235, 129); 
-    border: 2px solid rgb(255, 115, 0);
+    border: 2px solid rgba(255, 115, 0, 0.61);
     padding: 10px 20px; 
     color: black; 
     font-size: 16px; 
@@ -49,7 +53,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffe65b;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
     width: 75vw;
     height: auto;  
@@ -72,7 +76,7 @@ form {
 
 .formulaire__input,
 .formulaire__button {
-    border: 2px solid #31bcfd;
+    border: 2px solid #2883ad;
 }
 .formulaire__input{
     height: 2rem;
