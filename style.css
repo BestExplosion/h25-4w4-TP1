@@ -67,8 +67,7 @@ Le composant .carte
   border: 1px solid #ff5e00;
   background-color: #ffc117;
   padding: 20px;
-  border-radius: 8px;
-  flex: 1 1 220px;
+  flex: 1 1 22px;
 }
 .carte--grande {
   padding: 40px;
@@ -93,15 +92,11 @@ Le composant .carte
   color: #666;
 }
 .carte__bouton {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  color: rgb(62, 104, 146);
+  font-size: 1.5rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-.carte__bouton--actif {
-  background-color: #0056b3;
 }
 .carte__bouton:hover {
   background-color: #0056b3;
@@ -115,7 +110,7 @@ Le composant .carte
 .carte .post-categories a {
   text-decoration: none;
   padding: 10px 10px;
-  background-color: #007bff;
+  background-color: rgb(62, 104, 146);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -162,6 +157,7 @@ Layout
 /////////////////////////// */
 .global {
   padding: 10vh 5vw;
+  max-width: 1500px;
 }
 
 body {
@@ -171,6 +167,7 @@ body {
 .populaire .global {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .hero {
@@ -301,7 +298,7 @@ form {
   --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: rgb(236, 136, 13);
+  background-color: rgb(44, 62, 80);
   color: #000;
 }
 
@@ -312,12 +309,13 @@ footer {
 .piedpage__s1 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
 }
-.piedpage__s1__externe {
+.piedpage__s1__externe, .piedpage__s1__adresse, .piedpage__s1__description {
   flex: 0 0 20%;
 }
-.piedpage__s1__externe .menu {
+.piedpage__s1__externe .menu, .piedpage__s1__adresse .menu, .piedpage__s1__description .menu {
   display: flex;
   flex-direction: column;
 }
@@ -325,5 +323,16 @@ footer {
   flex: 0 0 40%;
 }
 .piedpage__s1__description {
-  flex: 1 0 300px;
-}/*# sourceMappingURL=style.css.map */
+  flex: 1 0 400px;
+}
+.piedpage__s2 {
+  padding: 2vh 2vw;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.piedpage__s3 {
+  display: flex;
+  justify-content: center;
+}

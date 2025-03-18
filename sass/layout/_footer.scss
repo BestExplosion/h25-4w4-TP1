@@ -3,7 +3,7 @@
 */
 
 footer{
-    background-color: rgb(236, 136, 13);
+    background-color: rgb(44, 62, 80);
     color : #000;
   }
   
@@ -13,8 +13,9 @@ footer{
     &__s1{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 3rem;
-        &__externe {
+        &__externe, &__adresse, &__description{
             flex : 0 0 20%;
             & .menu { //ul
                 display : flex;
@@ -29,7 +30,18 @@ footer{
               &__recherche{}
           }
           &__description{
-              flex:1 0 300px;
+              flex:1 0 400px;
           }
       }
+      &__s2 {
+        padding: 2vh 2vw;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__s3 {
+        display: flex;
+        justify-content: center;
+    }
   }
