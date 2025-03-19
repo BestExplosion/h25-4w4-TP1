@@ -4,11 +4,12 @@ Le composant .carte
 
 .carte {
     border: 1px solid #f7a271;
-    background-color: #ffe65b;
+    background-color: #fae681;
     padding: 20px;
     width: 300px;
     height: 550px;
     box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   
     &--grande {
       padding: 40px;

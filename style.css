@@ -27,14 +27,14 @@ p {
 }
 
 a {
-  color: rgb(62, 104, 146);
+  color: #b9d1f0;
   text-decoration: none;
 }
 a:hover {
   color: rgba(0, 0, 0, 0.1);
 }
 a:visited {
-  color: rgb(62, 104, 146);
+  color: #b9d1f0;
 }
 a:focus {
   color: rgba(0, 0, 0, 0.4);
@@ -65,11 +65,12 @@ Le composant .carte
 ********************** */
 .carte {
   border: 1px solid #f7a271;
-  background-color: #ffe65b;
+  background-color: #fae681;
   padding: 20px;
   width: 300px;
   height: 550px;
   box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 .carte--grande {
   padding: 40px;
@@ -188,11 +189,12 @@ body {
   background-color: rgb(243, 235, 129);
   border: 2px solid rgba(255, 115, 0, 0.61);
   padding: 10px 20px;
-  color: black;
+  color: rgb(84, 101, 255);
   font-size: 16px;
   border-radius: 5px;
   margin: 25px 0px 25px;
   cursor: pointer;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .hero__icone-app {
@@ -211,7 +213,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffe65b;
+  background-color: #fff2ab;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
   width: 75vw;
   height: auto;
