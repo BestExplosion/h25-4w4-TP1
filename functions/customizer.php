@@ -124,7 +124,7 @@ $wp_customize->add_setting('background_404', array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
 ));
-///////////////// ajout du contrôle de la donnée
+// Ajouter du contrôle de la donnée
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
   'label' => __('Image en arrière plan', 'theme_4w4'),
   'section' => 'erreur_section',
