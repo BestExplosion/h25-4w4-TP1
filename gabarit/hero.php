@@ -25,12 +25,7 @@
             <p class="hero__numero">
                 514-254-7131
             </p>
-            <div class="hero__icone-app">
-                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?php echo $couleur ?>" width="20" height="20" >
-                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=<?php echo $couleur ?>" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=<?php echo $couleur ?>" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=<?php echo $couleur?>" width="20" height="20">
-            </div>
+            <?php get_template_part('gabarit/icones') ?>
             
             <button class="hero__bouton">
                 s'inscrire

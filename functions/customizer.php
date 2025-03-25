@@ -101,7 +101,38 @@ function theme_31w_customize_register($wp_customize) {
     'section' => 'hero_section',
   )));
 
+/**Nouvelle Section page 404 */
+
+$wp_customize->add_section('erreur_section', array(
+  'title' => __('Section Erreur', 'theme_4w4'),
+  'priority' => 30,
+));
+
+// Ajouter l'erreur texte
+$wp_customize->add_setting('erreur_404', array(
+  'default' => __('Texte d\'erreur', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field',
+));
+
+$wp_customize->add_control('erreur_404', array(
+  'label' => __('Erreur', 'theme_31w'),
+  'section' => 'erreur_section',
+  'type' => 'text',
+));
+
+// Ajouter l'image d'arrière-plan pour l'erreur
+$wp_customize->add_setting('erreur_background', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
+  'label' => __('Sélection de l\'image d\'arrière-plan', 'theme_31w'),
+  'section' => 'erreur_section',
+)));
+
   }
+  
   
   add_action('customize_register', 'theme_31w_customize_register');
   
