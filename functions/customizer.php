@@ -120,14 +120,13 @@ $wp_customize->add_control('erreur_404', array(
   'type' => 'text',
 ));
 
-// Ajouter l'image d'arrière-plan pour l'erreur
-$wp_customize->add_setting('erreur_background', array(
+$wp_customize->add_setting('background_404', array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
 ));
-
-$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
-  'label' => __('Sélection de l\'image d\'arrière-plan', 'theme_31w'),
+///////////////// ajout du contrôle de la donnée
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
+  'label' => __('Image en arrière plan', 'theme_4w4'),
   'section' => 'erreur_section',
 )));
 

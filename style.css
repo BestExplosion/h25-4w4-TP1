@@ -307,11 +307,17 @@ form {
 footer {
   background-color: rgb(44, 62, 80);
   color: #b9d1f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .piedpage {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
 }
 .piedpage__s1 {
   display: flex;
@@ -319,6 +325,7 @@ footer {
   justify-content: center;
   gap: 3rem;
   padding: 2rem 0;
+  flex: 2;
 }
 .piedpage__s1__externe, .piedpage__s1__adresse, .piedpage__s1__description {
   flex: 1 1 30%;
@@ -383,4 +390,22 @@ footer {
   .piedpage__s2 {
     padding: 2vh 0.5vw;
   }
+}
+.conteneur_erreur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+}
+
+.contenu_erreur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

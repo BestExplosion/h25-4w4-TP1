@@ -1,17 +1,19 @@
 <?php  
-$erreur_background = get_theme_mod('erreur_background', 'Default Title');
 $erreur_404 = get_theme_mod('erreur_404', '404');
 $erreur_message = get_theme_mod('erreur_message', 'Désolé, la page demandée n\'existe pas ou a été déplacée. Veuillez vérifier l\'URL ou revenir à l\'accueil.');
+$background_404 = get_theme_mod('background_404', '');
 
 ?>
 
 <?php get_header(); ?>
-<div class = "erreur_404" style="background-image: url('<?php echo $erreur_background ?>'); Background-repeat: no-repeat">
-
-<h1><h1><?php echo $erreur_404; ?></h1></h1>
+<div class ="contenu_erreur">
+<h1><?php echo $erreur_404; ?></h1>
 <p><?php echo $erreur_message; ?></p>
 
 <?php get_template_part('gabarit/icones'); ?>
+</div>
+<div class="conteneur_erreur" style="background-image: url(<?php echo $background_404 ?>); background-size: 50%; background-repeat: no-repeat; background-position: center; height: 50vh;">
+
 </div>
 
 <?php get_footer(); ?>
