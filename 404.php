@@ -16,8 +16,8 @@ $background_404 = get_theme_mod('background_404', '');
 <div class="conteneur_erreur" style="background-image: url(<?php echo $background_404 ?>); background-size: 50%; background-repeat: no-repeat; background-position: center; height: 50vh;">
 </div>
 <div class="bouton-retour">
-            <a href="<?php echo home_url(); ?>" class="bouton-accueil">Retourner à l'accueil</a>
-        </div>
+            <a class = "bouton_acceuil" href="<?php echo home_url(); ?>" class="bouton-accueil">Retourner à l'accueil</a>
+</div>
 
 <?php get_footer(); ?>
 </body>
