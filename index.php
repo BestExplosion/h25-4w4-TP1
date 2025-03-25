@@ -4,6 +4,16 @@
  *  si aucun modèle peut satisfaire la requête http dans ce cas c'est index.php qui affichera le contenu de la page 
  * 
  */
+$page = $_GET['page'] ?? '';
+ 
+if (file_exists($page . ".php")) {
+    include $page . ".php";
+} else {
+    http_response_code(404);
+    include "404.php";
+    exit;
+}
+
 ?>
 
 <?php get_header() ?>
