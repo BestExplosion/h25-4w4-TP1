@@ -164,22 +164,22 @@ Le composant .carte
 
 .erreur__contenu {
   max-width: 200px;
-  width: 100%;
+  width: 60%;
   padding: 20px;
 }
 
 .erreur__titre {
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
-  padding: 25px 50px 50px 100px;
+  padding: 25px 25px;
 }
 
 .erreur__message {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 20px 0;
   background: rgba(255, 255, 255, 0.5);
-  padding: 25px 50px 50px 25px;
+  padding: 25px 25px;
 }
 
 .erreur_bouton a {
@@ -195,28 +195,66 @@ Le composant .carte
   color: #018839;
 }
 
-.menu-404-container {
-  margin-top: 20px;
-  text-decoration: none;
+.erreur__recherche {
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px;
+  color: #ffee00;
 }
 
-.erreur__recherche {
-  margin: 0;
-  padding: 0;
+.erreur__recherche input[type=search] {
   background: none;
-  border: none;
+  text-decoration: underline;
+  font-size: 2rem;
+  color: #ffee00;
+  text-align: center;
+  left: 50px;
+}
+
+.erreur__recherche input[type=search]::placeholder {
+  color: #ffee00;
+  text-align: center;
+}
+
+.erreur__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.erreur__menu li {
+  margin: 0 10px;
+}
+
+.erreur__menu a {
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffee00;
+  font-size: 1.2rem;
+  padding: 8px 20px;
+  display: block;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .erreur__titre {
     font-size: 2rem;
+    padding: 15px 40px;
   }
   .erreur__message {
     font-size: 1rem;
+    padding: 15px 20px;
   }
   .erreur_bouton a {
     font-size: 1rem;
     padding: 8px 15px;
+  }
+  .erreur__menu {
+    max-width: 80%;
   }
 }
 /* /////////////////////////

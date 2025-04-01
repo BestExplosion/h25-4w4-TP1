@@ -25,14 +25,16 @@ $erreur_texte = get_theme_mod('erreur_texte', '#fff');
     <div class="erreur_bouton">
             <a href="<?php echo home_url(); ?>" class="bouton-accueil">Retour à l'accueil</a>
     </div>
-
+    <div class="erreur__menu">
     <?php wp_nav_menu(array(
                 'menu'  => '404',
 		        'container'  => 'div',
 		        'container_class'=> '',
             )); ?>
 
-    <div class = "erreur__recherce">
+    </div>
+
+    <div class = "erreur__recherche">
         <?php get_search_form(); ?>
     </div>
     
