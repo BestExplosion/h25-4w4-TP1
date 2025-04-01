@@ -154,13 +154,11 @@ $wp_customize->add_setting('erreur_message', array(
 ));
 
 $wp_customize->add_control('erreur_message', array(
-  'label' => __('Auteur', 'theme_31w'),
+  'label' => __('Message d\'erreur', 'theme_31w'),
   'section' => 'section_404',
   'type' => 'text',
 ));
  
-
-
 /**Image d’arrière-plan */
 
 $wp_customize->add_setting('erreur_background', array(
@@ -174,13 +172,6 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
 )));
 
 
-
-
-
-
-
-
-
   /**Couleur du texte  */
   $wp_customize->add_setting('erreur_texte', array(
     'default' => '',
@@ -189,7 +180,7 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur_texte', array(
     'label' => __('Couleur du texte', 'theme_31w'),
-    'section' => 'hero_section',
+    'section' => 'section_404',
   )));
 
 

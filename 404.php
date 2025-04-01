@@ -1,6 +1,6 @@
 <?php 
 $erreur_titre = get_theme_mod('erreur_titre','Default Title');
-$erreur_message = get_theme_mod('erreur__message','Default Title');
+$erreur_message = get_theme_mod('erreur_message','Default Title');
 $erreurIntra_background = get_theme_mod('erreur_background', 'Default Title');
 $erreur_texte = get_theme_mod('erreur_texte', '#fff');
 
@@ -22,13 +22,21 @@ $erreur_texte = get_theme_mod('erreur_texte', '#fff');
         <?php echo $erreur_message ?>
     </p>
 
+    <div class="erreur_bouton">
+            <a href="<?php echo home_url(); ?>" class="bouton-accueil">Retour à l'accueil</a>
+    </div>
+
+    <?php wp_nav_menu(array(
+                'menu'  => '404',
+		        'container'  => 'div',
+		        'container_class'=> '',
+            )); ?>
+
     <div class = "erreur__recherce">
         <?php get_search_form(); ?>
     </div>
     
 </div>
-
-
 
 
 </section>

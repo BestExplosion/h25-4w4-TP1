@@ -152,6 +152,73 @@ Le composant .carte
   }
 }
 
+.section_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.erreur__contenu {
+  max-width: 200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.erreur__titre {
+  font-size: 5rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px 50px 50px 100px;
+}
+
+.erreur__message {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px 50px 50px 25px;
+}
+
+.erreur_bouton a {
+  padding: 10px 20px;
+  color: #1792e4;
+  background-color: #ffee00;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.erreur_bouton a:hover {
+  background-color: #2cf8ff;
+  color: #018839;
+}
+
+.menu-404-container {
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.erreur__recherche {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .erreur__titre {
+    font-size: 2rem;
+  }
+  .erreur__message {
+    font-size: 1rem;
+  }
+  .erreur_bouton a {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
 /* /////////////////////////
 Layout
 /////////////////////////// */
