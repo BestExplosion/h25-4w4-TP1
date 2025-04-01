@@ -103,7 +103,7 @@ function theme_31w_customize_register($wp_customize) {
 
 /**Nouvelle Section page 404 */
 
-$wp_customize->add_section('erreur_section', array(
+/*$wp_customize->add_section('erreur_section', array(
   'title' => __('Section Erreur', 'theme_4w4'),
   'priority' => 30,
 ));
@@ -128,7 +128,70 @@ $wp_customize->add_setting('background_404', array(
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
   'label' => __('Image en arrière plan', 'theme_4w4'),
   'section' => 'erreur_section',
+)));*/
+
+
+$wp_customize->add_section('section_404', array(
+  'title' => __('Erreur Section', 'theme_31w'),
+  'priority' => 30,
+));
+/**Titre principal */
+$wp_customize->add_setting('erreur_titre', array(
+  'default' => __('OOPS, vous avez échoué sur l\'île 404! ', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('erreur_titre', array(
+  'label' => __('Auteur', 'theme_31w'),
+  'section' => 'section_404',
+  'type' => 'text',
+));
+
+/**Titre principal */
+$wp_customize->add_setting('erreur_message', array(
+  'default' => __('message ', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('erreur_message', array(
+  'label' => __('Auteur', 'theme_31w'),
+  'section' => 'section_404',
+  'type' => 'text',
+));
+ 
+
+
+/**Image d’arrière-plan */
+
+$wp_customize->add_setting('erreur_background', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
+  'label' => __('Image en background', 'theme_31w'),
+  'section' => 'section_404',
 )));
+
+
+
+
+
+
+
+
+
+  /**Couleur du texte  */
+  $wp_customize->add_setting('erreur_texte', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+  
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur_texte', array(
+    'label' => __('Couleur du texte', 'theme_31w'),
+    'section' => 'hero_section',
+  )));
+
 
   }
   
