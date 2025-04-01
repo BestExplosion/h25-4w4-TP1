@@ -27,7 +27,7 @@ $erreur_texte = get_theme_mod('erreur_texte', '#fff');
     </div>
     <div class="erreur__menu">
     <?php wp_nav_menu(array(
-                'menu'  => '404',
+                'menu'  => 'principal',
 		        'container'  => 'div',
 		        'container_class'=> '',
             )); ?>

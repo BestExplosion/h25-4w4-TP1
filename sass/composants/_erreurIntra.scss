@@ -42,8 +42,6 @@
     color: #018839;
 }
 
-
-
 .erreur__recherche {
     width: 50%;                       
     margin: 20px auto;         
@@ -54,7 +52,7 @@
 .erreur__recherche input[type="search"] {                                              
     background: none;      
     text-decoration: underline;   
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #ffee00;
     text-align: center;
     left: 50px;
@@ -70,9 +68,9 @@
     justify-content: center;     
     align-items: center;
     flex-wrap: wrap;      
+    box-sizing: border-box;  
     width: 100%;
     margin-top: 20px; 
-    box-sizing: border-box;  
 }
 
 .erreur__menu li {
