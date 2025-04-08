@@ -257,6 +257,24 @@ Le composant .carte
     max-width: 80%;
   }
 }
+.categorie__ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+.categorie__ul__li {
+  border: 1px solid #aaa;
+  padding: 3px;
+  border-radius: 8px;
+  background-color: rgb(62, 104, 146);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
