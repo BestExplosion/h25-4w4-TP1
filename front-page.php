@@ -7,10 +7,11 @@
 ?>
 
 <?php get_header() ?>
+ <!-- SECTION HERO -->
 <?php get_template_part('gabarit/hero'); ?>
+ <!-- SECTION FORMULAIRE -->
 <?php get_template_part('gabarit/formulaire'); ?>
-
-
+ <!-- SECTION POPULAIRE -->
     <section class="populaire">
         <div class="boiteflex global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 

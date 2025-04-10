@@ -15,3 +15,28 @@
         cursor: pointer;
     }
 }
+
+.destination{
+    justify-content: center;
+    align-items: center;
+    padding: 0 20vw 10vh 20vw;
+}
+
+.destination__list div{
+        padding: 3px;
+        margin-top: 10px;
+        border-radius: 8px;
+        background-color: rgb(62, 104, 146);
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+}
+.descriptionArticleCategorie {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.descriptionArticleCategorie.visible {
+    max-height: 600px; 
+}
