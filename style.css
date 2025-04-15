@@ -336,7 +336,7 @@ body {
   width: 75vw;
   height: auto;
   min-height: 100px;
-  bottom: 5vh;
+  top: 0;
   padding: 10px;
 }
 
@@ -544,16 +544,31 @@ a .bouton_accueil {
 .hero {
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .hero__carrousel {
-  top: 0;
+  top: 0px;
   left: 0;
   position: absolute;
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
-
+.hero .hero__carrousel.active {
+  opacity: 1;
+  z-index: -1;
+}
+.hero__radio {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
 .hero__titre {
   text-shadow: 3px 3px rgb(251, 255, 8);
   font-size: clamp(3rem, 4vw, 6rem);
