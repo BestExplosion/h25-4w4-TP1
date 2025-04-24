@@ -301,6 +301,10 @@ Le composant .carte
   max-height: 600px;
 }
 
+.vague {
+  position: relative;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
