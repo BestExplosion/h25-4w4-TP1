@@ -24,12 +24,17 @@
     </div>
 <!--////////// HERO__CONTENU //////////-->
         <div class="hero__contenu global">
-            <h1 class="hero__titre hero__couleur">
-                <?php echo bloginfo('name') ?>
-            </h1>
-            <p class="hero__description hero__couleur">
-                <?php echo bloginfo('description') ?>
-            </p>
+            <div class="hero__animation">
+                <h1 class="hero__titre">
+                    <?php echo bloginfo('name') ?>
+                </h1>
+            </div>
+            <div class="hero__animation">    
+                <p class="hero__description hero__couleur">
+                    <?php echo bloginfo('description') ?>
+                </p>
+            </div>
+            
             <p class="hero__courriel" ><?php echo $hero_courriel ?>
             </p>
             <p class="hero__addresse">

@@ -4,7 +4,9 @@
     let heroRadios = document.querySelectorAll(".hero__radio__input");
     let carrousels = document.querySelectorAll(".hero__carrousel");
     let current = 0;
+    let hero__animation = document.querySelectorAll(".hero__animation");
     const total = carrousels.length;
+
 
     // Initialisation : activer le premier carrousel
     carrousels[current].classList.add("active");
