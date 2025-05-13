@@ -599,13 +599,6 @@ a .bouton_accueil {
   margin-top: 10px;
 }
 
-.hero__animation {
-  display: none;
-}
-.hero__animation__active {
-  display: block;
-}
-
 .hero__titre, .hero__description {
   position: relative;
   animation: anim_contenu 2s cubic-bezier(0.91, -0.59, 0.19, 1.59) forwards;

@@ -17,8 +17,8 @@ Template Name: Événement
 
                     <p>Le conférencier: <?php the_field('conferencier_evenement');?> </p>
                     <p>Le conférencier: <?php the_field('conferencier_description');?> </p>
-                    <p>Le conférencier: <?php the_field('conferencier_lieu');?> </p>
-                    <p>Le conférencier: <?php the_field('conferencier_date');?> </p>
+                    <p>Le lieu: <?php the_field('conferencier_lieu');?> </p>
+                    <p>La date: <?php the_field('conferencier_date');?> </p>
 
 
                 </article>
