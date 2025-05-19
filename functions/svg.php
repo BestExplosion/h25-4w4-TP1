@@ -5,8 +5,6 @@
  *  ********/
 function vague($couleur){ ?>
 
-
-
 <svg xmlns="http://www.w3.org/2000/svg"
 class = "vague"
 style = "top:10px;" 

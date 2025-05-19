@@ -9,7 +9,7 @@ viewBox="0 0 1440 320">
     </path>
 </svg>
 
-<footer style = "background-color">
+<footer>
     <?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');

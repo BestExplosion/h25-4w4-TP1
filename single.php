@@ -8,11 +8,15 @@
                 if (has_post_thumbnail()) {
                 the_post_thumbnail('large'); }
             ?>  
+                <!--Titre de l'article et info -->
                 <h2><?php the_title(); ?></h2>
                 <div><?php the_content() ?>
             <?php endwhile; endif; ?>
         </div>
     </section>
+
+
+    
     <?php get_footer(); ?>
    
 </body>
