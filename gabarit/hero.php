@@ -49,7 +49,7 @@
             <p class="hero__numero">
                 514-254-7131
             </p>
-            <?php get_template_part('gabarit/icones') ?>
+            <?php afficher_icones_sociaux(); ?>
             
             <button class="hero__bouton">
                 s'inscrire

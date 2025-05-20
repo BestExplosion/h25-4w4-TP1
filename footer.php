@@ -1,3 +1,11 @@
+    <?php
+    $footer_mission = get_theme_mod('footer_mission', 'Default Title');
+    $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
+    $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
+    $footer_destination_image = get_theme_mod('footer_destination_image');
+    
+
+    ?>
 <svg xmlns="http://www.w3.org/2000/svg"
 class = "vague"
 style = "top:10px;" 
@@ -9,14 +17,16 @@ viewBox="0 0 1440 320">
     </path>
 </svg>
 
-<footer>
-    <?php
-    $footer_mission = get_theme_mod('footer_mission', 'Default Title');
-    $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
-    $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
-
-    ?>
+<footer style="background-color: <?= esc_attr($footer_couleur); ?>; position: relative;">
     <div class="piedpage global">
+            <?php
+                $image_footer = get_theme_mod('footer_destination_image');
+                    if ($image_footer) {
+                    echo '<div class="footer__imageBackground">';
+                    echo '<img src="' . esc_url($image_footer) . '" alt="Image de fond du footer">';
+                    echo '</div>';
+                }
+            ?>
         <section class="piedpage__s1">
         <div class="piedpage__s1__externe">
         <h2>Nos partenaires</h2>
@@ -40,11 +50,9 @@ viewBox="0 0 1440 320">
             </div>
         </section>
         <section class="piedpage__s2">
-                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
+                 <?php afficher_icones_sociaux(); ?>
         </section>
+      
         <section class="piedpage__s3">
         <?php wp_nav_menu(array(
                     "menu" => "principal",

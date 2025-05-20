@@ -80,6 +80,20 @@ for ($k=0; $k <3; $k++)
         'section' => 'footer_section',
         'type' => 'text',
       ));
+
+   // Image de destination dans le footer
+  $wp_customize->add_setting('footer_destination_image', array(
+    'default'           => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_destination_image', array(
+    'label'    => __('Image de destination (Footer)', 'theme_4w4'),
+    'section'  => 'footer_social_section',
+    'settings' => 'footer_destination_image',
+  )));
+
+      
+
   /**Couleur du texte de la zone hero */
   $wp_customize->add_setting('hero_icone', array(
     'default' => '',
@@ -189,7 +203,64 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   
   add_action('customize_register', 'theme_31w_customize_register');
   
+// Enregistrer les options personnalisées dans le Customizer
+function mon_theme_customizer_register($wp_customize) {
 
+    //  Image de destination dans le footer
+    $wp_customize->add_setting('footer_destination_image');
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_destination_image', array(
+        'label' => 'Image de destination (footer)',
+        'section' => 'title_tagline',
+        'settings' => 'footer_destination_image',
+    )));
+
+    //  Icônes sociales : URL + image
+    $socials = ['facebook', 'linkedin', 'paypal', 'github'];
+
+    foreach ($socials as $social) {
+        // URL du réseau social
+        $wp_customize->add_setting("social_{$social}_url", [
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw'
+        ]);
+        $wp_customize->add_control("social_{$social}_url", [
+            'label' => ucfirst($social) . ' URL',
+            'section' => 'title_tagline',
+            'type' => 'url',
+        ]);
+
+        // Icône du réseau social (image)
+        $wp_customize->add_setting("social_{$social}_icon", [
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw'
+        ]);
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "social_{$social}_icon", [
+            'label' => "Icône pour " . ucfirst($social),
+            'section' => 'title_tagline',
+            'settings' => "social_{$social}_icon",
+        ]));
+    }
+}
+add_action('customize_register', 'mon_theme_customizer_register');
+
+
+//Affichage des icônes sociales dans le footer
+function afficher_icones_sociaux() {
+    $socials = ['facebook', 'linkedin', 'paypal', 'github'];
+
+    echo '<div class="icones-sociaux">';
+    foreach ($socials as $social) {
+        $url = get_theme_mod("social_{$social}_url");
+        $icon = get_theme_mod("social_{$social}_icon");
+
+        if ($url && $icon) {
+            echo '<a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer">';
+            echo '<img src="' . esc_url($icon) . '" alt="' . esc_attr($social) . '" width="24" height="24">';
+            echo '</a>';
+        }
+    }
+    echo '</div>';
+}
 
 
 ?>

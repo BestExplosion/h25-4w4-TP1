@@ -141,6 +141,11 @@ Le composant .carte
   flex: 0 0 20px;
   padding: 0 3px;
 }
+.recherche .recherche__input::-moz-placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
 .recherche .recherche__input::placeholder {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -209,6 +214,11 @@ Le composant .carte
   color: #ffee00;
   text-align: center;
   left: 50px;
+}
+
+.erreur__recherche input[type=search]::-moz-placeholder {
+  color: #ffee00;
+  text-align: center;
 }
 
 .erreur__recherche input[type=search]::placeholder {
@@ -440,6 +450,7 @@ footer {
   flex-direction: column;
   max-width: 1200px;
   width: 100%;
+  position: relative;
 }
 .piedpage__s1 {
   display: flex;
@@ -465,6 +476,56 @@ footer {
 }
 .piedpage__s1__description {
   flex: 1 1 400px;
+}
+.piedpage .footer__imageBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.1;
+  overflow: hidden;
+  border-radius: 20px;
+  pointer-events: none; /* évite de bloquer les liens */
+}
+.piedpage .footer__imageBackground img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.piedpage .piedpage > *:not(.footer__imageBackground) {
+  position: relative;
+  z-index: 1;
+}
+.piedpage .footer__content-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px); /* Ajustez pour laisser de l'espace pour les icônes */
+  z-index: 0;
+  opacity: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.piedpage .icones-sociaux {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.piedpage .icones-sociaux img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+.piedpage .icones-sociaux a:hover img {
+  transform: scale(1.1);
 }
 .piedpage__s2 {
   padding: 2vh 2vw;
