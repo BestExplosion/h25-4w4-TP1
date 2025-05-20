@@ -154,6 +154,11 @@ Le composant .carte
   flex: 0 0 20px;
   padding: 0 3px;
 }
+.recherche .recherche__input::-moz-placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
 .recherche .recherche__input::placeholder {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -222,6 +227,11 @@ Le composant .carte
   color: #ffee00;
   text-align: center;
   left: 50px;
+}
+
+.erreur__recherche input[type=search]::-moz-placeholder {
+  color: #ffee00;
+  text-align: center;
 }
 
 .erreur__recherche input[type=search]::placeholder {
@@ -500,7 +510,8 @@ footer {
 .piedpage .footer__imageBackground img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
 }
 .piedpage .piedpage > *:not(.footer__imageBackground) {
