@@ -13,7 +13,20 @@ gabarit permettant d'afficher une carte
                             the_post_thumbnail('thumbnail'); }
                         ?>
                     <h2 class="carte__titre"><?php the_title(); ?> </h2>
-                    <?php the_category() ?> 
+                    <?php 
+                        $categories = get_the_category();
+                        $filtered_categories = array_filter($categories, function($cat) {
+                            return strtolower($cat->name) !== 'populaire';
+                        });
+
+                        if (!empty($filtered_categories)) {
+                            echo '<div class="carte__categorie">';
+                            foreach ($filtered_categories as $cat) {
+                                echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '">' . esc_html($cat->name) . '</a>';
+                            }
+                            echo '</div>';
+                        }
+                        ?>
                     <p>Température minimum <?php  echo the_field('temperature_minimum'); ?>&#8451; </p>
                     <p>Température maximum <?php echo the_field('temperature_maximum'); ?>&#8451; </p>
                     <p class="carte__description"><?php echo wp_trim_words(get_the_excerpt(), 20, "..."); ?></p>

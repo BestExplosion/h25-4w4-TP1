@@ -13,7 +13,7 @@
         opacity: 0;
         transition: opacity 1s ease-in-out;
     }
-    .hero__carrousel.active{//her__carrousel--active
+    .hero__carrousel.active{
         opacity: 1;
         z-index: -1;
     }
