@@ -37,8 +37,8 @@
                 <div class="destination__temperatures">
                     <h2>Températures</h2>
                     <ul>
-                        <li><strong>Minimum :</strong> <?php echo get_post_meta(get_the_ID(), 'temperature_min', true); ?>°C</li>
-                        <li><strong>Maximum :</strong> <?php echo get_post_meta(get_the_ID(), 'temperature_max', true); ?>°C</li>
+                        <li><strong>Minimum :</strong> <?php echo get_post_meta(get_the_ID(), 'temperature_minimum', true); ?>°C</li>
+                        <li><strong>Maximum :</strong> <?php echo get_post_meta(get_the_ID(), 'temperature_maximum', true); ?>°C</li>
                         <li><strong>Moyenne :</strong> <?php echo get_post_meta(get_the_ID(), 'temperature_moyenne', true); ?>°C</li>
                     </ul>
                 </div>
