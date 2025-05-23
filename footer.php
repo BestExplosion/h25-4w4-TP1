@@ -9,7 +9,7 @@
 <!-- SVG vague en haut du footer -->
 <svg xmlns="http://www.w3.org/2000/svg"
 class = "vague"
-style = "top:10px;" 
+style = "top:10px;background-color: #fff2ab;" 
 viewBox="0 0 1440 320">
 <path 
     fill="#2C3E50" 

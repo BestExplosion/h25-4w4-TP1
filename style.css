@@ -709,4 +709,11 @@ a .bouton_accueil {
     transform: translateX(0);
     opacity: 1;
   }
+}
+.destinationLesPays {
+  background-color: #fff2ab;
+  position: relative;
+  padding: 60px 20px;
+  z-index: 0;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
