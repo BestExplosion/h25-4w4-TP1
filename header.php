@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href=" ">
     <title>Document</title>
    <!-- <link rel="stylesheet" href="normalize.css"> -->
    <!-- <link rel="stylesheet" href="style.css">-->
-    <?php wp_head(); ?> 
+    <?php wp_head(); ?>
+    <base href="<?php echo get_site_url(); ?>">
 </head>
 <body>
     <header>

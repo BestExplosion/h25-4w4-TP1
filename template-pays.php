@@ -14,6 +14,7 @@ Template Name: Pays
                      the_post_thumbnail(); ?>
                     <h2 class="populaire__titre"><?php the_title(); ?></h2>
                     <div class="pouplaire__contenu"><?php the_content(); ?></div>
+
                 </article>
             <?php endwhile; endif; ?>
         </div>
@@ -30,10 +31,8 @@ Template Name: Pays
         </path>
     </svg>
     <section class = "destinationLesPays">
-        <?php categories_liste("destination"); ?>
-        <section class="destination">
-            <h2 class="destination__titre">Articles de la catégorie</h2>
-            <div class="destination__list"></div>
-        </section>
+    <h2 class="destination__titre">Articles de la catégorie</h2>
+    <div id="menu-ListeDesPays" class="menu-ListeDesPays"></div>
+    <div class="destination__list"></div>
     </section>
 <?php get_footer(); ?>
