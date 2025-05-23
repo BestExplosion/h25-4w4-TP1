@@ -148,9 +148,7 @@
   
               destinationList.appendChild(articleEl);
             });
-          } else {
-            destinationList.innerHTML = "<p>Aucune destination trouvée.</p>";
-          }
+          } 
         })
         .catch(err => {
           console.error("Erreur API:", err);
